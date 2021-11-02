@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> About Me Part 2 </title>
+        <style>
+        h1,
+        h2,
+        h3{
+        
+            text-align: left;
+            font-size: 40px;
+            color: #ffffff;
+            font-family:'Times New Roman', serif;
+            
+        
+}    
+
+       h4, 
+       h5,
+       h6{
+         text-align: left;
+         color:#0c7ad3;
+       }
+       body{
+        background-image: url(https://th.bing.com/th/id/R.cf71c0f1b3cc530c77f286e765cc35c5?rik=zY%2bO0J9BbYUNdg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fHD-Cool-3D-Wallpaper.jpg&ehk=sZVsig9bMdkWT2Udroh9IFD0yfkWzZ%2fBA81xKw%2fGWJI%3d&risl=&pid=ImgRaw&r=0)
+
+       }
+       .boxes {
+            font-size: 20px;
+            color: #0c7ad3;
+            font-family:'Times New Roman', serif;
+            padding-left: 35px;
+            margin-bottom: 12px;
+
+       }
+       .fonts {
+            font-size: 20px;
+            color: white;
+            font-family:'Times New Roman', serif;
+            padding-left: 35px;
+            margin-bottom: 12px;
+       }
+       .button {
+  			border: double;
+			border-radius: 12px;  			
+  			padding: 16px 32px;
+  			text-align: center;
+  			display: inline-block;
+  			font-size: 12px;
+ 			margin: 2px 2px;
+  			transition-duration: 0.4s;
+  			cursor: pointer;
+		}
+		.button1 {
+  			background-color: black; 
+  			color: white; 
+  			border: 4px double #db0606;
+		}
+		.button1:hover {
+  			background-color: white;
+  			color: black;
+
+		}
+        .Name {
+            border: red;
+            border-style: groove;            
+            color:#0c7ad3;
+            font-family:'Times New Roman', serif;
+        }
+        .images {
+            border:  4px red;
+            border-style: groove;   
+        }
+        </style>
+        <!-- Citation for background Image: (https://th.bing.com/th/id/R.cf71c0f1b3cc530c77f286e765cc35c5?rik=zY%2bO0J9BbYUNdg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fHD-Cool-3D-Wallpaper.jpg&ehk=sZVsig9bMdkWT2Udroh9IFD0yfkWzZ%2fBA81xKw%2fGWJI%3d&risl=&pid=ImgRaw&r=0-->
+        <script>
+        function calculateRelativeness(){
+            var boxCount = 0;
+            var relative = "";
+            var answer = "";
+          var isChecked1 = document.getElementById('ChiId').checked;
+          if(isChecked1){
+              boxCount += 1
+          }
+          var isChecked2 = document.getElementById('BullsId').checked;
+          if(isChecked2){
+              boxCount += 1
+          }
+          var isChecked3 = document.getElementById('PastaId').checked;
+          if(isChecked3){
+              boxCount += 1
+          }
+          var isChecked4 = document.getElementById('LasagnaId').checked;
+          if(isChecked4){
+              boxCount += 1
+          }
+          var isChecked5 = document.getElementById('PizzaId').checked;
+          if(isChecked5){
+              boxCount += 1
+          }
+          var isChecked6 = document.getElementById('TennisId').checked;
+          if(isChecked6){
+              boxCount += 1
+          }
+        
+          if(boxCount <= 2){
+            relative = "WE ARE NOT TOO ALIKE!"
+          }
+          else if (boxCount => 4 && boxCount < 5 ){
+            relative = "WE SHARE SOME HOBBIES! "
+          }
+          else if(boxCount => 6){
+              relative = "WE SHARE A LOT OF HOBBIES!!"
+          }
+          var name = document.getElementById('nameId').value
+          answer += "Hello " + name + "," + " Hope you are doing well!" + "<br><br>"
+          answer += "You have checked " + boxCount + " box/boxes! " + " <br><br>"
+          answer += relative + "<br><br>"
+          answer += "Thank You for doing this survey!" + "<br><br>"
+           
+          document.getElementById('calculateRelativenessId').innerHTML = answer;
+        }
+        </script>
+    </head>
+    
+    <body>
+        <h2> Favorite Sports Teams:</h2>
+        <h4><a href="https://www.chicagobears.com/">The Chicago Bears</a></h4>
+        <h4><a href="https://www.nba.com/bulls/?tmd=1">The Chicago Bulls</a></h4>    
+        <IMG SRC="sports.gif" width = "200" height = "200" class = "images"><br><br>
+
+    
+        <h2> Favorite Foods: </h2>
+        <h4> - Pasta</h4>
+        <h4> - Lasagna</h4>
+        <h4> - Pizza</h4>
+
+        <h3> Do a quick survey!</h3>
+        <input type = "text" id = "nameId" name = "Name" value = "Name" class = "Name"><br><br>
+        <input type="checkbox" id="ChiId" name="Chicago" value="Chicago">
+        <label for="Chicago" class = "boxes">I like the Chicago Bears!</label><br>
+        <input type="checkbox" id="BullsId" name="Bulls"  value=Bulls">
+        <label for="Bulls" class = "boxes"> I like the Chicago Bulls!</label><br>
+        <input type="checkbox" id="PastaId" name="Pasta"  value="Pasta">
+        <label for="Pasta" class = "boxes"> I like Pasta!</label><br>
+        <input type="checkbox" id="LasagnaId" name="Lasagna"  value="Lasagna">
+        <label for="Lasagna" class = "boxes">I like Lasagna!</label><br>
+        <input type="checkbox" id="PizzaId" name="Pizza"  value="Pizza">
+        <label for="Pizza" class = "boxes">I like Pizza!</label><br>
+        <input type="checkbox" id="TennisId" name="tennis"  value="tennis">
+        <label for="tennis" class = "boxes">I enjoy tennis!</label><br><br>
+        <div id = "calculateRelativenessId" class = "fonts"></div>
+
+        <input type="Submit" value="Submit" class = "button button1" onClick="calculateRelativeness()"><br>
+
+ 
+
+        </body>
+</html>
+
